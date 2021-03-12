@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class NextPage {
+
     Page page = new FrameworkInitialize().InitializePlaywrightPage();
     String navBar = "#MainNavigation";
     String navBarElements = "li.Primarynavlinks";
@@ -19,8 +20,7 @@ public class NextPage {
 
     public void checkNavBar(){
         page.getAttribute(navBar, "id").equalsIgnoreCase("HeaderNavigation");
-//        page.screenshot(new Page.ScreenshotOptions()
-//                .withPath(Paths.get("src/test/resources/screenshots/navBar.png")));
+        Assert.assertEquals(14, getNavbarElements().size());
     }
     public List<String> getNavbarElements(){
         navbarList =  page.querySelectorAll(navBarElements)
@@ -30,7 +30,7 @@ public class NextPage {
         return navbarList;
     }
 
-    public void clickNavBarItem(String value){
+    public void clickNavBarLinks(String value){
         String selector = "text=" + value;
         page.click(selector);
         if(value.equalsIgnoreCase("baby")){

@@ -10,7 +10,7 @@ public class FrameworkInitialize {
 		Browser browser = Playwright
                 .create()
 				.chromium()
-                .launch(new LaunchOptions().setHeadless(false));
+                .launch(new LaunchOptions().setHeadless(true));
 
 		Page page = browser.newPage();
 

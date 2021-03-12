@@ -20,7 +20,7 @@ public class Stepdefs {
 	}
 
 	@And("^check \"([^\"]*)\" navbar link$")
-	public void checkNavbarLink(String value) {
-		next.clickNavBarItem(value);
+	public void checkNavbarLinks(String value) {
+		next.clickNavBarLinks(value);
 	}
 }

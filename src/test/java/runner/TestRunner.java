@@ -1,21 +1,25 @@
 package runner;
 
+//import cucumber.api.CucumberOptions;
+import com.microsoft.playwright.Page;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(strict = true, monochrome = true,
+@CucumberOptions(
         features = "src/test/resources/features/",
         glue = {"steps"},
-        plugin = {"junit:target/junitreport.xml","json:target/jsonreport.json", "pretty"}
+        plugin = { "pretty"}
         
 )
-public class TestRunner {
+public class TestRunner{
+
 
     private TestRunner() {
 
@@ -31,7 +35,7 @@ public class TestRunner {
 	  
 	  @AfterClass 
 	  public static void afterClass() {
-		  
+
 	  }
 	 
 }

@@ -11,6 +11,18 @@
             <artifactId>playwright</artifactId>
             <version>1.9.1-alpha-0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.microsoft.playwright/driver -->
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>driver</artifactId>
+            <version>1.9.1-alpha-0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.microsoft.playwright/driver-bundle -->
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>driver-bundle</artifactId>
+            <version>1.9.1-alpha-0</version>
+        </dependency>
 
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -52,6 +64,20 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.7</version>
         </dependency>
+<!--        axe-->
+        <dependency>
+            <groupId>com.deque</groupId>
+            <artifactId>axe-selenium</artifactId>
+            <version>3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
