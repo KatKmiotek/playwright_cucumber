@@ -1,6 +1,7 @@
 package steps;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import pages.*;
@@ -15,7 +16,7 @@ public class Stepdefs {
 	}
 
 	@Given("^check if all elements of navBar are present$")
-	public void check_if_all_elements_of_are_present() {
+	public void check_if_all_elements_of_are_present() throws JsonProcessingException {
 		next.checkNavBar();
 	}
 

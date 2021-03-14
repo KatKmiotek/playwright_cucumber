@@ -1,10 +1,9 @@
 package pages;
 
-import com.deque.axe.AXE;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.microsoft.playwright.Page;
 import com.sun.java.accessibility.util.AccessibilityListenerList;
 import framework.*;
-import org.json.JSONObject;
 import org.junit.Assert;
 
 import java.net.URL;
@@ -23,9 +22,9 @@ public class NextPage {
         return page.url();
     }
 
-    public void checkNavBar(){
+    public void checkNavBar() throws JsonProcessingException {
         page.getAttribute(navBar, "id").equalsIgnoreCase("HeaderNavigation");
-        System.out.println(axeConfig.injectAxe());
+        axeConfig.injectAxe("navBar");
         Assert.assertEquals(14, getNavbarElements().size());
     }
     public List<String> getNavbarElements(){
