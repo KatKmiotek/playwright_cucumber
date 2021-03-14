@@ -1,9 +1,13 @@
 package pages;
 
+import com.deque.axe.AXE;
 import com.microsoft.playwright.Page;
+import com.sun.java.accessibility.util.AccessibilityListenerList;
 import framework.*;
+import org.json.JSONObject;
 import org.junit.Assert;
 
+import java.net.URL;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,6 +17,7 @@ public class NextPage {
     String navBar = "#MainNavigation";
     String navBarElements = "li.Primarynavlinks";
     static List<String> navbarList;
+    AxeConfig axeConfig = new AxeConfig();
 
     public String getUrl(){
         return page.url();
@@ -20,6 +25,7 @@ public class NextPage {
 
     public void checkNavBar(){
         page.getAttribute(navBar, "id").equalsIgnoreCase("HeaderNavigation");
+        System.out.println(axeConfig.injectAxe());
         Assert.assertEquals(14, getNavbarElements().size());
     }
     public List<String> getNavbarElements(){

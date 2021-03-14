@@ -9,5 +9,5 @@ Feature: Checking Next online shop website
     Examples:
     | section |
     | boys    |
-    | girls   |
-    | baby    |
+#    | girls   |
+#    | baby    |
