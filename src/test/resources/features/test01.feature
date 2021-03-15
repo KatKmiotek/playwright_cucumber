@@ -1,3 +1,4 @@
+@next
 Feature: Checking Next online shop website
   Scenario Outline: Confirming behaviour of UI on main page
     Given I am on Next home page
