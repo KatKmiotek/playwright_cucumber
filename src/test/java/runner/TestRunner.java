@@ -1,8 +1,5 @@
 package runner;
 
-//import cucumber.api.CucumberOptions;
-import com.microsoft.playwright.Page;
-//import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
